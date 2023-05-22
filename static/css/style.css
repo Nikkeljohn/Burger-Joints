@@ -543,6 +543,18 @@ a:focus {
     background: transparent;
 }
 
+.btn.custom-btn2:hover {
+    color: #f5f5f5;
+    background: transparent;
+
+}
+
+.btn.custom-btn2 {
+    width: 100%;
+    color: #ffffff;
+    background: #f70a0a;
+    border: 1px solid #ffffff;
+} 
 
 /*******************************/
 /********** Menu CSS ***********/

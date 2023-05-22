@@ -22,5 +22,8 @@ def contact_us(request):
    
     return render(request,'contact.html', context)
 
+def booking(request):
+    return render(request, 'booking.html')
+
 def about(request):
     return render(request, 'about.html')
