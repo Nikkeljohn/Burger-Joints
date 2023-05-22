@@ -42,7 +42,7 @@
                         <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
                         <a href="{% url 'booking' %}" class="nav-item nav-link active">Booking</a>
                         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                        <a href="" class="nav-item nav-link">Our Team</a>
+                        <a href="{% url 'team' %}" class="nav-item nav-link">Our Team</a>
                         <a href="" class="nav-item nav-link">Sign-in</a>
                         <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
                         {% if user.is_authenticated %}
