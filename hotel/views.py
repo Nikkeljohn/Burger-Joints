@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from hotel import Contact
+from hotel.models import Contact
 from django.http import HttpResponse
 
 # Create your views here.
