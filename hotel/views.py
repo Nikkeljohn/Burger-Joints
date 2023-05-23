@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from hotel.models import Contact, Team, Profile
+from hotel.models import Contact, Team, Profile, Booking
 from django.http import HttpResponse,JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
@@ -10,6 +10,14 @@ def menu(request):
     return render(request, 'menu.html')
 
 def booking(request):
+    context={}
+    if request.method=="post":
+        name = request.POST.get("name")
+        eml = request.POST.get("email")
+        mob = request.Post.get("mobile")
+        dat = request.POST.get("date")
+        tim = request.POST.get("time")
+
     return render(request, 'booking.html')
 
 def about(request):
