@@ -52,9 +52,9 @@
                             {% if user.is_superuser or user.is_staff %}
                                 <a href="{% url 'admin:index' %}" class="dropdown-item">Dashboard</a>
                             {% else %}
-                                <a href="{% url 'dashboard' %}" class="dropdown-item">Dashboard</a>
+                                <a href="" class="dropdown-item">Dashboard</a>
                             {% endif %}
-                                <a href="{% url 'logout' %}" class="dropdown-item">Logout</a>
+                                <a href="" class="dropdown-item">Logout</a>
                             </div>
                         </div>
                         {% else %}

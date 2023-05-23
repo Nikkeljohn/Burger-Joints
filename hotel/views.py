@@ -9,6 +9,13 @@ from django.contrib.auth import login, authenticate, logout
 def index(request):
     return render(request,'index.html')
 
+
+def booking(request):
+    return render(request, 'booking.html')
+
+def about(request):
+    return render(request, 'about.html')
+    
 def contact_us(request):
     context={}
     if request.method=="POST":
@@ -19,22 +26,29 @@ def contact_us(request):
         
         obj = Contact(name=name, email=em, subject=sub, message=msz)
         obj.save()
-        context['message']=f"Dear {name}, Your Mesage has been sent!"
-        
-   
+        context['message']=f"Dear {name}, Thanks for your time!"
+
     return render(request,'contact.html', context)
 
-def booking(request):
-    return render(request, 'booking.html')
-
 def about(request):
-    return render(request, 'about.html')
+    return render(request,'about.html')
 
 def team_members(request):
     context={}
     members = Team.objects.all().order_by('name')
     context['team_members'] = members
     return render(request,'team.html', context)
+
+def all_dishes(request):
+    context={}
+    dishes = Dish.objects.all()
+    if "q" in request.GET:
+        id = request.GET.get("q")
+        dishes = Dish.objects.filter(category__id=id)
+        context['dish_category'] = Category.objects.get(id=id).name 
+
+    context['dishes'] = dishes
+    return render(request,'all_dishes.html', context)
 
 def register(request):
     context={}
@@ -66,7 +80,6 @@ def check_user_exists(request):
         return JsonResponse({'status':0,'message':'Not Exist'})
     else:
         return JsonResponse({'status':1,'message':'A user with this email already exists!'})
-
 
 def signin(request):
     context={}

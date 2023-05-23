@@ -27,6 +27,7 @@ urlpatterns = [
     path('register/',views.register,name="register"),
     path('login/', views.signin, name='login'),
     path('check_user_exists/',views.check_user_exists,name="check_user_exist"),
+    path('dashboard/', views.dashboard, name='dashboard'),
 
     #path('accounts/', include('allauth.urls')),
 ]
