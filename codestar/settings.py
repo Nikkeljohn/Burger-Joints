@@ -142,6 +142,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 CLOUIDNARY_URL = os.environ.get('CLOUDINARY_URL')
+                #'API_SECRET': '',
+                #'API_KEY':
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
