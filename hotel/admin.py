@@ -1,5 +1,5 @@
 from django.contrib import admin
-from myapp.models import Contact, Category, Team, Dish, Profile,Order
+from hotel.models import Contact, Category, Team, Dish, Profile,Order
 
 admin.site.site_header = "FoodZone | Admin"
 
