@@ -143,3 +143,5 @@ def user_logout(request):
 
 def single_dish(request, id):
     return render(request,'dish.html')
+
+
