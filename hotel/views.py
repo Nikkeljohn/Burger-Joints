@@ -6,9 +6,8 @@ from django.contrib.auth import login, authenticate, logout
 
 # Create your views here.
 
-def index(request):
-    return render(request,'index.html')
-
+def menu(request):
+    return render(request, 'menu.html')
 
 def booking(request):
     return render(request, 'booking.html')
@@ -16,6 +15,10 @@ def booking(request):
 def about(request):
     return render(request, 'about.html')
     
+def index(request):
+    
+    return render(request,'index.html')
+
 def contact_us(request):
     context={}
     if request.method=="POST":
@@ -40,15 +43,8 @@ def team_members(request):
     return render(request,'team.html', context)
 
 def all_dishes(request):
-    context={}
-    dishes = Dish.objects.all()
-    if "q" in request.GET:
-        id = request.GET.get("q")
-        dishes = Dish.objects.filter(category__id=id)
-        context['dish_category'] = Category.objects.get(id=id).name 
-
-    context['dishes'] = dishes
-    return render(request,'all_dishes.html', context)
+   
+    return render(request,'all_dishes.html')
 
 def register(request):
     context={}
@@ -139,10 +135,14 @@ def dashboard(request):
             context['status'] = 'Current Password Incorrect!'
 
     #My Orders 
-    orders = Order.objects.filter(customer__user__id=request.user.id).order_by('-id')
-    context['orders']=orders    
-    return render(request, 'dashboard.html', context)
+    #orders = Order.objects.filter(customer__user__id=request.user.id).order_by('-id')
+    #context['orders']=orders   
+
+    return render(request, 'dashboard.html')
 
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/')
+
+def single_dish(request, id):
+    return render(request,'dish.html')
