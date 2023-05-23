@@ -40,7 +40,16 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
                         <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
-                        <a href="{% url 'booking' %}" class="nav-item nav-link active">Booking</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Bookings
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" aria-current="page" href="">Manage Bookings</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="">New Booking</a></li>                       
+                            </ul>
+                        </li>
                         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                         <a href="{% url 'team' %}" class="nav-item nav-link">Our Team</a>
                         <a href="{% url 'menu' %}"  class="nav-item nav-link">Menu</a>

@@ -32,7 +32,6 @@ urlpatterns = [
     path('dashboard/', views.dashboard, name='dashboard'),
     path('logout/', views.user_logout, name='logout'),
     path('dish/<int:id>/', views.single_dish, name='dish'),
-    path('booking/', views.booking_us,name='booking'),
     path('menu/', views.menu,name='menu'),
     
     

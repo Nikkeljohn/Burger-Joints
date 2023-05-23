@@ -84,26 +84,4 @@ class Order(models.Model):
 
     class Meta:
         verbose_name_plural = "Order Table"
-
-class Booking(models.Model):
-    name = models.CharField(max_length=250)
-    email = models.EmailField()
-    mobile = models.CharField(max_length=15)
-    time = models.TimeField()
-    guest = models.IntegerField(default=0)
-    added_on = models.DateTimeField(auto_now_add=True)
-    is_approved = models.BooleanField(default=True)
-    date = models.DateField()
-
-    def save(self, *args, **kwargs):
-        # Parse the input date string and convert it to the desired format
-        formatted_date = datetime.strptime(self.date, "%m/%d/%Y").strftime("%Y-%m-%d")
-        self.date = formatted_date
-        super().save(*args, **kwargs)
-
-
-    def __str__(self):
-        return self.name  
-
-    class Meta:
-        verbose_name_plural = "Booking Table"
+ 
