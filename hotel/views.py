@@ -9,16 +9,21 @@ from django.contrib.auth import login, authenticate, logout
 def menu(request):
     return render(request, 'menu.html')
 
-def booking(request):
+def booking_us(request):
     context={}
-    if request.method=="post":
+    if request.method=="POST":
         name = request.POST.get("name")
         eml = request.POST.get("email")
-        mob = request.Post.get("mobile")
+        mob = request.POST.get("mobile")
         dat = request.POST.get("date")
         tim = request.POST.get("time")
+        gus = request.POST.get("guest")
 
-    return render(request, 'booking.html')
+        obj = Booking(name=name, email=eml,mobile=mob , date=dat, time=tim, guest=gus)
+        obj.save()
+        context['message']=f"Dear {name}, Thanks for your booking!"
+
+    return render(request, 'booking.html', context)
 
 def about(request):
     return render(request, 'about.html')

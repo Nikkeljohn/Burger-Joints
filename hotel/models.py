@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
+from datetime import datetime
 
 # Create your models here.
 class Contact(models.Model):
@@ -88,13 +89,21 @@ class Booking(models.Model):
     name = models.CharField(max_length=250)
     email = models.EmailField()
     mobile = models.CharField(max_length=15)
-    date = models.DateField()
     time = models.TimeField()
+    guest = models.IntegerField(default=0)
     added_on = models.DateTimeField(auto_now_add=True)
     is_approved = models.BooleanField(default=True)
+    date = models.DateField()
+
+    def save(self, *args, **kwargs):
+        # Parse the input date string and convert it to the desired format
+        formatted_date = datetime.strptime(self.date, "%m/%d/%Y").strftime("%Y-%m-%d")
+        self.date = formatted_date
+        super().save(*args, **kwargs)
+
 
     def __str__(self):
-        return self.name
+        return self.name  
 
     class Meta:
-        verbose_name_plural = "Contact Table"
+        verbose_name_plural = "Booking Table"

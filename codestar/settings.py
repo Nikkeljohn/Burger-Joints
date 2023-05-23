@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary',
     'hotel',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -44,6 +46,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 ROOT_URLCONF = 'codestar.urls'
 
@@ -59,6 +64,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field'
+            ]
         },
     },
 ]
@@ -129,6 +138,9 @@ STATICFILES_DIRS = [
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CLOUIDNARY_URL = os.environ.get('CLOUDINARY_URL')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

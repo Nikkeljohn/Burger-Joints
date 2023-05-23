@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+{% if message %}
+<script>
+ alert('{{message}}');
+</script>
+{% endif %}
 
 <!-- Page Header Start -->
 <div class="page-header mb-0">
@@ -45,7 +50,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="booking-form">
-                    <form method="post">
+                    <form name="booking" method="post">
                         {% csrf_token %}
                         <div class="control-group">
                             <div class="input-group">
@@ -112,9 +117,7 @@
                         <div>
                             <button class="btn custom-btn" type="submit">Book Now</button>
                         </div>
-                        <div> 
-                            <button class="btn custom-btn2" type="submit">Edit</button>
-                        </div>
+                
                     </form>
                 </div>
             </div>
