@@ -43,22 +43,22 @@
                         <a href="{% url 'booking' %}" class="nav-item nav-link active">Booking</a>
                         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                         <a href="{% url 'team' %}" class="nav-item nav-link">Our Team</a>
-                        <a href="" class="nav-item nav-link">Sign-in</a>
+                        <a href="{% url 'register' %}" class="nav-item nav-link">Sign-in</a>
                         <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
                         {% if user.is_authenticated %}
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i></a>
                             <div class="dropdown-menu">
                             {% if user.is_superuser or user.is_staff %}
-                                <a href="" class="dropdown-item">Dashboard</a>
+                                <a href="{% url 'admin:index' %}" class="dropdown-item">Dashboard</a>
                             {% else %}
-                                <a href="" class="dropdown-item">Dashboard</a>
+                                <a href="{% url 'dashboard' %}" class="dropdown-item">Dashboard</a>
                             {% endif %}
-                                <a href="" class="dropdown-item">Logout</a>
+                                <a href="{% url 'logout' %}" class="dropdown-item">Logout</a>
                             </div>
                         </div>
                         {% else %}
-                        <a href="" class="nav-link" ><i class="fas fa-user"></i></a>
+                        <a href="{% url 'register' %}" class="nav-link" ><i class="fas fa-user"></i></a>
                         {% endif %}
                     </div>
                 </div>

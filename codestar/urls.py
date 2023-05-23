@@ -24,4 +24,9 @@ urlpatterns = [
     path('about/',views.about,name='about'),
     path('booking/', views.booking,name='booking'),
     path('team/',views.team_members,name='team'),
+    path('register/',views.register,name="register"),
+    path('login/', views.signin, name='login'),
+    path('check_user_exists/',views.check_user_exists,name="check_user_exist"),
+
+    #path('accounts/', include('allauth.urls')),
 ]
