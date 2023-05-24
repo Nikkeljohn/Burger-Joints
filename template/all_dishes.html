@@ -48,12 +48,7 @@
                             }
                         </script>
                     </p>
-                    {% if i.is_available %}
-                    <a href="{% url 'dish' id=i.id %}">Order Now</a>
-                    {% else %}
-                        <p class="text-danger">Not Available for delivery!</p>
-                    {% endif %}
-                </div>
+                    
             </div>
         {% endfor %}
         </div>

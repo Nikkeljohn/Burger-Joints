@@ -18,7 +18,7 @@ All projects were assigned to epics, prioritized under the labels, Must have, sh
 
 The Kanban board was created using github projects and can be located [here](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak/projects/1) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
-![Kanban image](docs/readme_images/kanban.PNG)
+![Kanban image]()
 
 #### Epics
 
@@ -94,7 +94,7 @@ As a user, I would like to be able to view menus so that I can decide if I would
 
 As a staff user, I want to be able to edit a menu when updates are needed
 
-As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked
+
 
 As a staff user, I want to be able to delete a menu when it is no longer used
 
@@ -102,14 +102,12 @@ As a staff user, I want to be able to delete a menu when it is no longer used
 
 As a user, I would like to be able to create a new booking when I want to visit the restaurant
 
-As a user, I would like to view my bookings when I need to check the information
+
 
 As a user, I would like to receive feedback when I create a booking or edit one so I know it was completed successfully
 
 
 **EPIC 6 - Deployment Epic**
-
-As a developer, I need to set up whitenoise so that my static files are served in deployment
 
 As a developer, I need to deploy the project to heroku so that it is live for customers
 
@@ -142,16 +140,16 @@ Implementation:
 
 The following navigation items are available on all pages:
   * Home -> index.html - Visible to all
-  * Manage Bookings -> managebookings.html - Visible to logged in users
-  * New Booking -> booking.html - Visible to logged in users
-  * View Menus -> menus.html - Visible to all
+  * Dashboard - Visible to logged in users
+  *  Booking page - Visible to everyone
+  * View Menus/Dish -> menus.html - Visible to all
   * Login -> login.html - Visible to logged out users
   * Register -> signup.html - Visible to logged out users
   * Logout -> logout.html - Visible to logged in users
 
 The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
 
-![Navbar](docs/readme_images/navbar.PNG)
+![Navbar]()
 
 ``USER STORY - As a restaurant owner, I would like a home page so that customers can view information on my restaurant``
 
@@ -165,11 +163,11 @@ Under the information section are two buttons, 'Make a booking' and 'View Menus'
 
 The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
 
-![Hero Image](docs/readme_images/hero.PNG)
+![Hero Image]()
 
-![Welcome Section](docs/readme_images/welcome.PNG)
+![Welcome Section]()
 
-![Find Us](docs/readme_images/find-us.PNG)
+![Find Us]()
 
 
 ``USER STORY - As a developer, I need to create the footer with social media links and contact information``
@@ -180,7 +178,7 @@ Implementation:
 
 A footer has been added to the bottom of the site, this contains a Twitter and Facebook link so that users can follow the restaurant on social media if they want to keep up to date with special offers not advertised on the website. These icons have aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
 
-![Footer](docs/readme_images/footer.PNG)
+![Footer]()
 
 ``USER STORY - As a staff user, I want to be able to create a new menu when we have new dishes to offer``
 
@@ -190,7 +188,7 @@ Implementation:
 
 A create menu page was implemented to allow staff users to create new menus via the UI without having to use the backend admin panel. This will allow staff the ability to quickly update menus when they have made changes to the food being offered.
 
-![Create Menu](docs/readme_images/create-menu.PNG)
+![Create Menu]()
 
 ``USER STORY -As a user, I would like to be able to view menus so that I can decide if I would like to dine at the restaurant``
 
@@ -200,27 +198,27 @@ Implementation:
 
 A menu page has been implemented to allow users to see the current active menus and decide whether they are interested in the food we offer before booking. This is visible to all users regardless of logged in state as it is not user friendly to restrict core information from users to force them into signing up.
 
-![View Menus](docs/readme_images/menus.PNG)
+![View Menus]()
 
 ``USER STORY -As a staff user, I want to be able to edit a menu when updates are needed``
 
 Implementation:
 
-**Edit Menu Page**
+**Edit Menu/dish Page**
 
 On the manage menus page a button was added to allow staff members to edit a menu when changes need to be made.
 
-![Edit Menu](docs/readme_images/edit-menu.PNG)
+![Edit Menu/Dish]()
 
 ``USER STORY -As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked``
 
 Implementation:
 
-**Toasts**
+**Menu/Dish**
 
-Custom toasts were added on successful creation and deletion of menus which display success messages to the user to enable them to see that the action completed successfully.
+Custom Dish were added on successful creation and deletion of menus which display success messages to the user to enable them to see that the action completed successfully.
 
-![Menu Toasts](docs/readme_images/toast-menu.PNG)
+![Menu]()
 
 ``USER STORY -As a staff user, I want to be able to delete a menu when it is no longer used``
 
@@ -230,7 +228,7 @@ Implementation:
 
 On the manage menus page, a delete button has been implemented that will take staff users to a confirmation page to allow them to delete a menu. This will allow staff to delete menus when they are no longer needed
 
-![Delete Menu](docs/readme_images/delete-menu.PNG)
+![Delete Menu]
 
 ``USER-STORY - As a user, I would like to be able to create a new booking when I want to visit the restaurant``
 
@@ -244,107 +242,30 @@ Extensive logic was added to the form validation to ensure that not only is ther
 
 This allows for seat optimisation to ensure we do not have small amounts of guests at tables that could of been booked for larger groups. Ensuring table optimisation and revenue for the restaurant.
 
-![Create Booking](docs/readme_images/create-booking.PNG)
-
-``USER-STORY - As a user, I would like to view my bookings when I need to check the information``
-
-Implementation:
-
-**Manage bookings page**
-
-A manage bookings page was implemented with validation checks on the user. This shows all of the users bookings. This will allow the user to view their upcoming bookings when needed.
-
-For restaurant staff users, all bookings will be available to display so that staff can easily view numbers and future bookings.
-
-![Manage Bookings](docs/readme_images/manage-bookings.PNG)
-
-``USER-STORY - As a user, I would like to be able to edit a booking so that I can make changes when needed``
-
-Implementation:
-
-**Edit Booking Page**
-
-On the manage bookings page an edit button is present that allows the user to direct to a form and update their booking when required. This will allow the user to easily manage their own booking.
-
-For staff users, they can also edit bookings from the manage booking page, even if they did not create the reservation. This will allow restaurant staff to ammend details as needed.
-
-![Edit Booking](docs/readme_images/edit-booking.PNG)
-
-``USER-STORY - As a user, I would like to receive feedback when I create a booking or edit one so I know it was completed successfully``
-
-Implementation:
-
-**Toasts**
-
-Custom toasts were implemented on the successful creation and editing of bookings. This will provide feedback to the user to relay information that the booking was successfully received or updated.
-
-![Booking Toasts](docs/readme_images/booking-toast.PNG)
-
-``USER-STORY - As a staff user, I want to be able to search a booking by reference to save time searching``
-
-Implementation:
-
-**Searchbox**
-
-A search box was added to the manage bookings page that is only visible to staff users. This will allow the staff members to easily locate a booking by reference number if they need to find it quickly.
-
-[Search Boxes](docs/readme_images/search.PNG)
-
-``USER-STORY - As a user I would like to delete a booking when I no longer require it``
-
-Implementation:
-
-**Delete Booking Page**
-
-A delete button was added to the manage bookings page that will allow customers to delete their booking should they no longer require it without the need to call the restaurant.
-
-For staff members, they also have the abaility to delete any booking through the UI as well. This will allow staff to free up table capacity should a customer call to cancel their booking.
-
-![Delete Booking](docs/readme_images/delete-booking.PNG)
+![Create Booking]()
 
 Favicon
     * A site wide favicon was implemented.
     * This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
-![Favicon](docs/readme_images/favicon.PNG)
+![Favicon]
 
-**Error Pages**
 
-``USER STORY - As a developer, I need to implement a 404 error page to alert users when they have accessed a page that doesn't exist``
 
 Implementation:
 
-**404 Page**
 
-As a developer, I need to implement a 404 error page to redirect users to
-
-A 404 page has been implemented and will display if a user navigates to a broken link.
-
-The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
-
-``USER STORY - As a developer, I need to implement a 403 error page to alert users when accessing a page/view that they do not have permission to view``
-
-Implementation:
-
-**403 Page**
-
-A 403 error page has been implemented to provide feedback to the user when they try to access unauthorized content. Users will be directed to this page if they alter the URL's and attempt to edit, delete or access pages that are restricted. 
 
 This covers:
 
 * Create Menu - Only authorized to staff
 * Edit Menu - Only authorized to staff
 * Delete Menu - Only authorized to staff
-* Edit Booking - Only authorized to the customer who created the booking or a staff member
-* Delete booking - Only authorized to the customer who created the booking or a staff member
+* Create booking - only for user
 
-``USER STORY - As a developer, I need to implement a 500 error page to alert users when an internal server error occurs``
+
 
 Implementation:
-
-**500 Page**
-
-A 500 error page has been displayed to alert users when an internal server error occurs. The message relays to users that the problem is on our end, not theirs.
 
 **Base Setup User Stories**
 
@@ -371,22 +292,22 @@ A favicon was added the website to enable users to easily locate the website in 
 - Home page
 
 
-![Home Page](docs/wireframes/home.JPG)
+![Home Page]
 
 
 - Signup page
 
 
-![Sign up Page](docs/wireframes/register.JPG)
+![Sign up Page]
 
 - Log in
 
-![Login Page](docs/wireframes/login.JPG)
+![Login Page]
 
 - Log Out
 
-![Logout Page](docs/wireframes/logout.JPG)
+![Logout Page]
 
 - Create Booking
 
-![Create Booking](docs/wireframes/create_booking.JPG)
+![Create Booking]

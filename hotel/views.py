@@ -3,6 +3,11 @@ from hotel.models import Contact, Team, Profile, Dish
 from django.http import HttpResponse,JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
+from django.views.generic import (
+    CreateView, ListView,
+    DetailView, DeleteView,
+    UpdateView
+)
 
 
 # Create your views here.
@@ -41,9 +46,6 @@ def team_members(request):
     context['team_members'] = members
     return render(request,'team.html', context)
 
-def all_dishes(request):
-   
-    return render(request,'all_dishes.html')
 
 def register(request):
     context={}
@@ -157,13 +159,8 @@ def all_dishes(request):
     context['dishes'] = dishes
     return render(request,'all_dishes.html', context)
 
-def booking_view(request):
-      
-
+def booking_us(request):
+ 
     
-            
-            # Save the booking to the database or perform any other necessary actions
-            
-            # Redirect to a success page or display a success message
-    return render(request, 'booking.html')
+     return render(request, 'booking.html')
   
