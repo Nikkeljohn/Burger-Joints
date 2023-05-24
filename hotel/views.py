@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from hotel.models import Contact, Team, Profile
+from hotel.models import Contact, Team, Profile, Dish
 from django.http import HttpResponse,JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
+
 
 # Create your views here.
 
@@ -15,6 +16,7 @@ def about(request):
 def index(request):
     
     return render(request,'index.html')
+
 
 def contact_us(request):
     context={}
@@ -144,4 +146,24 @@ def user_logout(request):
 def single_dish(request, id):
     return render(request,'dish.html')
 
+def all_dishes(request):
+    context={}
+    dishes = Dish.objects.all()
+    if "q" in request.GET:
+        id = request.GET.get("q")
+        dishes = Dish.objects.filter(category__id=id)
+        context['dish_category'] = Category.objects.get(id=id).name 
 
+    context['dishes'] = dishes
+    return render(request,'all_dishes.html', context)
+
+def booking_view(request):
+      
+
+    
+            
+            # Save the booking to the database or perform any other necessary actions
+            
+            # Redirect to a success page or display a success message
+    return render(request, 'booking.html')
+  

@@ -19,6 +19,9 @@ from hotel import views
 from django.conf import settings 
 from django.conf.urls.static import static
 
+
+app_name = 'booking'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
@@ -33,5 +36,10 @@ urlpatterns = [
     path('logout/', views.user_logout, name='logout'),
     path('dish/<int:id>/', views.single_dish, name='dish'),
     path('menu/', views.menu,name='menu'),
+    path('booking/',views.booking_view,name='booking'),
+    path('dishes/',views.all_dishes,name="all_dishes"),
+    
+
+
     #path('accounts/', include('allauth.urls')),
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
