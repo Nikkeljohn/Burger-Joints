@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'recipes',
     'rangefilter',
+    'booking',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [TEMPLATE_DIR,],
+    
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

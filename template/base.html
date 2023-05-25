@@ -36,14 +36,24 @@
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+        
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
                         <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
-                        <a href="{% url 'booking' %}" class="nav-item nav-link active">Bookings</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Bookings
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" aria-current="page" href="{% url 'managebookings' %}">Manage Bookings</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="{% url 'createbooking' %}">New Booking</a></li>                       
+                            </ul>
+                        </li>
+                                
                         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                         <a href="{% url 'all_dishes' %}" class="nav-item nav-link">Dish</a>
-                        <a href="{% url 'add_recipe' %}" class="nav-item nav-link">Recipes</a>
+            
                         <a href="{% url 'team' %}" class="nav-item nav-link">Our Team</a>
                         <a href="{% url 'menu' %}"  class="nav-item nav-link">Menu</a>
                         <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
@@ -64,6 +74,8 @@
                         {% endif %}
                     </div>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
         <!-- Nav Bar End -->

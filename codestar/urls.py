@@ -34,9 +34,10 @@ urlpatterns = [
     path('logout/', views.user_logout, name='logout'),
     path('dish/<int:id>/', views.single_dish, name='dish'),
     path('menu/', views.menu,name='menu'),
-    path('booking/',views.booking_us,name='booking'),
+    #path('booking/',views.booking_us,name='booking'),
     path('dishes/',views.all_dishes,name="all_dishes"),
     path('recipes/', include('recipes.urls')),
+     path('booking/', include('booking.urls')),
     
 
 

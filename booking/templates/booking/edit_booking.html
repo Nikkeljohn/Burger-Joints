@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-header mb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Edit A Table</h2>
+            </div>
+            <div class="col-12">
+                <a href="">Home</a>
+                <a href="">Booking</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Booking Start -->
+<div class="booking">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="booking-content">
+                    <div class="section-header">
+                        <p>Edit A Table</p>
+                        <h2>Book Your Table For Private Dinners & Happy Hours</h2>
+                    </div>
+                    <div class="about-text">
+                  
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="booking-form">
+                    <form name="booking" method="post" action="{% url 'createbooking' %}" >
+    <form method="POST" action="{% url 'createbooking' %}" class="form mb-2 p-2 form-style" enctype="multipart/form-data">
+        <h1 class="text-center">Edit Booking</h1>
+    <form method="POST" action="{% url 'editbooking' booking.id %}" class="form mb-2 p-2 form-style" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{ form.id }}
+        {{ form|crispy }}
+        {{ form.media }}
+        
+   <div>
+                            <button class="btn custom-btn" type="submit">Edit Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script>
+    // Initialize datepicker
+    $('.datepicker').datepicker();
+</script>
+
+{% endblock %}
