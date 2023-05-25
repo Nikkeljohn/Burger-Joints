@@ -35,10 +35,4 @@ urlpatterns = [
     path('dish/<int:id>/', views.single_dish, name='dish'),
     path('menu/', views.menu,name='menu'),    
     path('dishes/',views.all_dishes,name="all_dishes"),
-    path('booking/', include('booking.urls')),
-   
-    
-
-
-    #path('accounts/', include('allauth.urls')),
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

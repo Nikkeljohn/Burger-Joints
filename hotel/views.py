@@ -177,8 +177,8 @@ def book_table(request):
 
             # Perform further actions, such as saving the booking to the database
 
-            return render(request, 'booking/success.html')
+            return render(request, 'success.html')
     else:
         form = BookingForm()
 
-    return render(request, 'booking/book.html', {'form': form})
+    return render(request, 'book.html', {'form': form})

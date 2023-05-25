@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'rangefilter',
-    'booking',
 ]
 
 LOGIN_REDIRECT_URL = '/'
