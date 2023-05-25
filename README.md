@@ -281,25 +281,26 @@ A favicon was added the website to enable users to easily locate the website in 
 - Home page
 
 
-![Home Page]
+![Home Page](doc/wire/homepage1.png)
+![Home page](doc/wire/home2.png)
 
 
 - Signup page
 
 
-![Sign up Page]
+![Register Page](doc/wire/registerweb.png)
+![Register Page mob](doc/wire/loginmob.png)
 
-- Log in
+- Log in /  Log Out
 
-![Login Page]
+![Login Page](doc/wire/dashboard.png)
+![login mob](doc/wire/dashboardmob.png)
 
-- Log Out
-
-![Logout Page]
 
 - Create Booking
 
-![Create Booking]
+![Create Booking](doc/website/booking.png)
+![Create booking](doc/wire/bookingmob.png)
 
 ## Technolgies
 
