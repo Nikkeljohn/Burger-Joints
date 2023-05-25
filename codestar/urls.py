@@ -37,7 +37,8 @@ urlpatterns = [
     #path('booking/',views.booking_us,name='booking'),
     path('dishes/',views.all_dishes,name="all_dishes"),
     path('recipes/', include('recipes.urls')),
-     path('booking/', include('booking.urls')),
+    path('booking/', include('booking.urls')),
+   
     
 
 

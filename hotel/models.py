@@ -96,4 +96,13 @@ class Order(models.Model):
         verbose_name_plural = "Order Table"
  
 
-     
+class Booking(models.Model):
+    name = models.CharField(max_length=105)
+    email = models.EmailField()
+    mobile = models.CharField(max_length=20)
+    date = models.DateField()
+    time = models.TimeField()
+    guests = models.IntegerField()
+
+    def __str__(self):
+        return self.name

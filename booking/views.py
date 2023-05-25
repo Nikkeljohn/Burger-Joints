@@ -64,6 +64,7 @@ class BookingsList(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         """ Queryset function for manage booking search """
+       
         query = self.request.GET.get('q')
         dates = self.request.GET.get('d')
         if query:
@@ -144,7 +145,7 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ A view to delete a booking """
     model = Booking
-    success_url = "/booking/managebookings"
+    success_url = "/booking/delete_booking"
 
     def form_valid(self, form):
         """ Display toast message on form success """

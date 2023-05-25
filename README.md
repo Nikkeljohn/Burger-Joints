@@ -16,9 +16,9 @@ This project was developed using agile methodologies by delivering small feature
 
 All projects were assigned to epics, prioritized under the labels, Must have, should have, could have. They were assigned to sprints and story pointed according to complexity. "Must have" stories were completed first, "should haves" and then finally "could haves". It was done this way to ensure that all core requirements were completed first to give the project a complete feel, with the nice to have features being added should there be capacity.
 
-The Kanban board was created using github projects and can be located [here](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak/projects/1) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
+The burger-joint2 board was created using github projects and can be located [here](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak/projects/1) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
-![Kanban image]()
+![Burger-joint2 image]()
 
 #### Epics
 
@@ -28,9 +28,9 @@ The project had 7 main Epics (milestones):
 
 The base setup epic is for all stories needed for the base set up of the application. Without the base setup, the app would not be possible so it was the first epic to be delivered as all other features depend on the completion of the base setup.
 
-**EPIC 2 - Stand alone Pages**
+**EPIC 2 - Contact/admins**
 
-The stand alone pages epic is for small pages that did not have enough stories to warrant their own full epics. Instead of creating epics for tiny features, these small deliverables were all added under this epic.
+The contact/admin stories are related to all staff are able to from back end.
 
 **EPIC 3 - Authentication Epic**
 
@@ -38,11 +38,11 @@ The authentication epic is for all stories related to the registration, login an
 
 **EPIC 4 - Menu**
 
-The menu epic is for all stories that relate to the creating, deleting, editing and viewing of menus. This allows for regular users to view menus and for staff to manage them with a simple UI interface.
+The menu epic is for all stories that relate to the creating, deleting, editing and viewing of menus. This allows for  users to view menus and for staff to manage them from admin panel.
 
 **EPIC 5 - Booking**
 
-The booking epic is for all stories that relate to creating, viewing, updating and deleting bookings. This allows the staff to easily view upcoming bookings, manage the bookings and also for customers to book and manage their own reservations.
+The booking epic is for all stories that relate to creating, viewing, updating  bookings. This allows the staff to easily view upcoming bookings, manage the bookings and also for customers to book and manage their own reservations.
 
 **EPIC 6 - Deployment Epic**
 
@@ -68,21 +68,12 @@ As a developer, I need to create the footer with social media links and contact 
 
 As a developer, I need to create the navbar so that users can navigate the website from any device
 
-**EPIC 2 - Stand alone Pages**
-
-As a developer, I need to implement a 404 error page to alert users when they have accessed a page that doesn't exist
-
-As a developer, I need to implement a 500 error page to alert users when an internal server error occurs
-
-As a developer, I need to implement a 403 error page to redirect unauthorised users to so that I can secure my views
-
-As a restaurant owner, I would like a home page so that customers can view information on my restaurant
 
 **EPIC 3 - Authentication Epic**
 
 As a developer, I need to implement allauth so that users can sign up and have access to the websites features
 
-As a Site Owner, I want users to verify their email when registering an account so that I can ensure that a valid email address is being used.
+As a Site Owner, I want users to verify their email when registering an account so that I can ensure that a  email address is being used.
 
 As a site owner, I would like the allauth pages customized to that they fit in with the sites styling
 
@@ -95,8 +86,8 @@ As a user, I would like to be able to view menus so that I can decide if I would
 As a staff user, I want to be able to edit a menu when updates are needed
 
 
-
 As a staff user, I want to be able to delete a menu when it is no longer used
+only from backend
 
 **EPIC 5 - Booking**
 
@@ -142,7 +133,7 @@ The following navigation items are available on all pages:
   * Home -> index.html - Visible to all
   * Dashboard - Visible to logged in users
   *  Booking page - Visible to everyone
-  * View Menus/Dish -> menus.html - Visible to all
+  * View Menus/Dish -> menus.html/all_dishes.html - Visible to all
   * Login -> login.html - Visible to logged out users
   * Register -> signup.html - Visible to logged out users
   * Logout -> logout.html - Visible to logged in users
@@ -157,11 +148,12 @@ Implementation:
 
 **Home Page**
 
-The home page contains a hero image of a seaside restaurant and the restaurant information at the top of the page. This will immediately make it evident to the user, what the purpose of the website is.
+The home page contains a hero image our animated where images changes everytime  and the restaurant information at the top of the page. This will immediately make it evident to the user, what the purpose of the website is.
 
-Under the information section are two buttons, 'Make a booking' and 'View Menus'. These buttons will allow the user a quick way to the respective pages if they wish to make a booking or view the restaurants active menus.
+whitin the nav bar we have Home, Bookings, About, Dish, Our Team, Menu and Contact
+. These buttons will allow the user a quick way to the respective pages if they wish to make a booking or view the restaurants active menus.
 
-The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
+The contact us  section page onyly contains a google map, displaying the location of the restaurant and the restaurant is opened 24hrs.
 
 ![Hero Image]()
 
@@ -210,13 +202,11 @@ On the manage menus page a button was added to allow staff members to edit a men
 
 ![Edit Menu/Dish]()
 
-``USER STORY -As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked``
 
 Implementation:
 
 **Menu/Dish**
 
-Custom Dish were added on successful creation and deletion of menus which display success messages to the user to enable them to see that the action completed successfully.
 
 ![Menu]()
 

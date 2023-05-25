@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404, reverse
-from hotel.models import Contact, Team, Profile, Dish
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from hotel.models import Contact, Team, Profile, Dish, Booking
 from django.http import HttpResponse,JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
@@ -8,6 +8,7 @@ from django.views.generic import (
     DetailView, DeleteView,
     UpdateView
 )
+
 
 
 # Create your views here.
@@ -159,8 +160,26 @@ def all_dishes(request):
     context['dishes'] = dishes
     return render(request,'all_dishes.html', context)
 
-def booking_us(request):
- 
-    
-     return render(request, 'booking.html')
-  
+def book_table(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        mobile = request.POST['mobile']
+        date = request.POST['date']
+        time = request.POST['time']
+        guest = request.POST['guest']
+
+        booking = Booking(name=name, email=email, mobile=mobile, date=date, time=time, guest=guest)
+        booking.save()
+
+        return render(request, 'success.html')
+
+
+def delete_booking(request, booking_id):
+    booking = Booking.objects.get(id=booking_id)
+
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('index.html')  
+
+    return render(request, 'delete.html', {'booking': booking})
