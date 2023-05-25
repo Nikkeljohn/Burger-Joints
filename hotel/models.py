@@ -101,8 +101,19 @@ class Booking(models.Model):
     email = models.EmailField()
     mobile = models.CharField(max_length=20)
     date = models.DateField()
-    time = models.TimeField()
-    guests = models.IntegerField()
+    booking_time = models.IntegerField(choices=BOOKING_TIME, default=1)
+    guests = models.IntegerField(default=2)
 
     def __str__(self):
         return self.name
+
+class Table(models.Model):
+    capacity = models.IntegerField(choices=CAPACITY, default=2)
+    table_number = models.IntegerField()
+
+    class Meta:
+            
+        ordering = ['table_number']
+
+    def __str__(self):
+        return str(self.table_number)

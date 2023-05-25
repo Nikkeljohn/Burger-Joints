@@ -2,7 +2,7 @@
 
 
 
-
+![Mock Up]
 
 ### Site-Goals
 
@@ -16,9 +16,9 @@ This project was developed using agile methodologies by delivering small feature
 
 All projects were assigned to epics, prioritized under the labels, Must have, should have, could have. They were assigned to sprints and story pointed according to complexity. "Must have" stories were completed first, "should haves" and then finally "could haves". It was done this way to ensure that all core requirements were completed first to give the project a complete feel, with the nice to have features being added should there be capacity.
 
-The burger-joint2 board was created using github projects and can be located [here](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak/projects/1) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
+The burger-joint2 board was created using github projects and can be located [here](https://github.com/users/Nikkeljohn/projects/12/views/1) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
-![Burger-joint2 image]()
+![Burger-joint2 image](doc/website/agile.png)
 
 #### Epics
 
@@ -140,7 +140,7 @@ The following navigation items are available on all pages:
 
 The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
 
-![Navbar]()
+![Navbar](doc/website/navbar.png)
 
 ``USER STORY - As a restaurant owner, I would like a home page so that customers can view information on my restaurant``
 
@@ -155,11 +155,10 @@ whitin the nav bar we have Home, Bookings, About, Dish, Our Team, Menu and Conta
 
 The contact us  section page onyly contains a google map, displaying the location of the restaurant and the restaurant is opened 24hrs.
 
-![Hero Image]()
+![Hero Image](doc/website/homepage.png)
 
-![Welcome Section]()
 
-![Find Us]()
+![Find Us](doc/website/findus.png)
 
 
 ``USER STORY - As a developer, I need to create the footer with social media links and contact information``
@@ -301,3 +300,128 @@ A favicon was added the website to enable users to easily locate the website in 
 - Create Booking
 
 ![Create Booking]
+
+## Technolgies
+
+- HTML
+  - The structure of the Website was developed using HTML as the main language.
+- CSS
+  - The Website was styled using custom CSS in an external file.
+- JavaScript
+  - JavaScript was used to make the custom slider on the menu page change and the bootstrap date picker.
+- Python
+  - Python was the main programming language used for the application using the Django Framework.
+- Visual Studio Code
+  - The website was developed using Visual Studio Code IDE
+- GitHub
+  - Source code is hosted on GitHub
+- Git
+  - Used to commit and push code during the development of the Website
+- Font Awesome
+  - This was used for various icons throughout the site
+- Favicon.io
+  - favicon files were created at https://favicon.io/favicon-converter/
+- balsamiq
+  - wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/#
+- TinyPNG
+  - This was used to compress the hero image for optimal load times
+
+**External Python Modules**
+
+* cloudinary==1.29.0 - Cloundinary was set up for use but no custom uploads were made, settings remain for future development
+* crispy-bootstrap5==0.6 - This was used to allow bootstrap5 use with crispy forms
+* cryptography==37.0.2 - Installed as dependency with another package
+* defusedxml==0.7.1 - Installed as dependency with another package
+* dj-database-url==0.5.0 - Used to parse database url for production environment
+* dj3-cloudinary-storage==0.0.6 - Storage system to work with cloudinary
+* Django==4.0.5 - Framework used to build the application
+* django-admin-rangefilter==0.8.4 - This was used to search bookings in the admin for a range between 2 dates
+* django-allauth==0.51.0 - Used for the sites authentication system, sign up, sign in, logout, password resets ect.
+* django-crispy-forms==1.14.0 - Used to style the forms on render
+* django-model-utils==4.2.0 - Installed as dependency with another package
+* gunicorn==20.1.0 - Installed as dependency with another package
+* idna==3.3 - Installed as dependency with another package
+* oauthlib==3.2.0 - Installed as dependency with another package
+* psycopg2==2.9.3 - Needed for heroku deployment
+* pycparser==2.21 - Installed as dependency with another package
+* PyJWT==2.4.0 - Installed as dependency with another package
+* python3-openid==3.2.0 - Installed as dependency with another package
+* requests==2.27.1 - Installed as dependency with another package
+* requests-oauthlib==1.3.1 - Installed as dependency with another package (allauth authentication)
+* six==1.16.0 - Installed as dependency with another package
+* sqlparse==0.4.2 - Installed as dependency with another package
+* tzdata==2022.1 - Installed as dependency with another package
+* urllib3==1.26.9 - Installed as dependency with another package
+* whitenoise==6.2.0 - Used to serve static files directly without use of static resource provider like cloundinary
+
+## Testing
+
+Test cases and results can be found in the [TESTING.md](TESTING.md) file. This was moved due to the size of the file.
+
+## Deployment
+
+### Version Control
+
+The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘Gars-Steakhouse’.
+
+The following git commands were used throughout development to push code to the remote repo:
+
+```git add <file>``` - This command was used to add the file(s) to the staging area before they are committed.
+
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step.
+
+```git push``` - This command was used to push all committed code to the remote repository on github.
+
+### Heroku Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+- Navigate to heroku and create an account
+- Click the new button in the top right corner
+- Select create new app
+- Enter app name
+- Select region and click create app
+- Click the resources tab and search for Heroku Postgres
+- Select hobby dev and continue
+- Go to the settings tab and then click reveal config vars
+- Add the following config vars:
+  - SECRET_KEY: (Your secret key)
+  - DATABASE_URL: (This should already exist with add on of postgres)
+  - EMAIL_HOST_USER: (email address)
+  - EMAIL_HOST_PASS: (email app password)
+  - CLOUNDINARY_URL: (cloudinary api url)
+- Click the deploy tab
+- Scroll down to Connect to GitHub and sign in / authorize when prompted
+- In the search box, find the repositoy you want to deploy and click connect
+- Scroll down to Manual deploy and choose the main branch
+- Click deploy
+
+The app should now be deployed.
+
+The live link can be found here: [Live Site](https://burger-joint2.herokuapp.com/)
+
+### Run Locally
+
+Navigate to the GitHub Repository you want to clone to use locally:
+
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type git clone copied-git-url into the IDE terminal
+
+The project will now have been cloned on your local machine for use.
+
+### Fork Project
+
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
+
+- Navigate to the GitHub Repository you want to fork.
+
+- On the top right of the page under the header, click the fork button.
+
+- This will create a duplicate of the full project in your GitHub Repository.
+
+## Credits
+
+- site was developed by Designed By HTML Codex

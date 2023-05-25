@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'hotel',
     'crispy_forms',
     'crispy_bootstrap5',
-    'recipes',
     'rangefilter',
     'booking',
 ]

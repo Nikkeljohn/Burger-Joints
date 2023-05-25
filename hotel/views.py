@@ -8,7 +8,8 @@ from django.views.generic import (
     DetailView, DeleteView,
     UpdateView
 )
-
+from django.shortcuts import render
+from .forms import BookingForm
 
 
 # Create your views here.
@@ -160,26 +161,24 @@ def all_dishes(request):
     context['dishes'] = dishes
     return render(request,'all_dishes.html', context)
 
+
+
 def book_table(request):
     if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        mobile = request.POST['mobile']
-        date = request.POST['date']
-        time = request.POST['time']
-        guest = request.POST['guest']
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            # Process the form data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            mobile = form.cleaned_data['mobile']
+            date = form.cleaned_data['date']
+            time = form.cleaned_data['time']
+            guest = form.cleaned_data['guest']
 
-        booking = Booking(name=name, email=email, mobile=mobile, date=date, time=time, guest=guest)
-        booking.save()
+            # Perform further actions, such as saving the booking to the database
 
-        return render(request, 'success.html')
+            return render(request, 'booking/success.html')
+    else:
+        form = BookingForm()
 
-
-def delete_booking(request, booking_id):
-    booking = Booking.objects.get(id=booking_id)
-
-    if request.method == 'POST':
-        booking.delete()
-        return redirect('index.html')  
-
-    return render(request, 'delete.html', {'booking': booking})
+    return render(request, 'booking/book.html', {'form': form})
