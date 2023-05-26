@@ -1,5 +1,6 @@
 # Burger-Joints
 
+is a fictional restaurant located beside New york city . The app is a restaurant management system designed to allow staff to easily manage the menus . It also provides customers with a simple,
 
 
 ![Mock Up]
@@ -169,7 +170,7 @@ Implementation:
 
 A footer has been added to the bottom of the site, this contains a Twitter and Facebook link so that users can follow the restaurant on social media if they want to keep up to date with special offers not advertised on the website. These icons have aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
 
-![Footer]()
+![Footer](doc/wire/footer.png)
 
 ``USER STORY - As a staff user, I want to be able to create a new menu when we have new dishes to offer``
 
@@ -179,7 +180,7 @@ Implementation:
 
 A create menu page was implemented to allow staff users to create new menus via the UI without having to use the backend admin panel. This will allow staff the ability to quickly update menus when they have made changes to the food being offered.
 
-![Create Menu]()
+![Create Menu](doc/wire/menu.png)
 
 ``USER STORY -As a user, I would like to be able to view menus so that I can decide if I would like to dine at the restaurant``
 
@@ -189,7 +190,7 @@ Implementation:
 
 A menu page has been implemented to allow users to see the current active menus and decide whether they are interested in the food we offer before booking. This is visible to all users regardless of logged in state as it is not user friendly to restrict core information from users to force them into signing up.
 
-![View Menus]()
+![View Menus](doc/wire/dish.png)
 
 ``USER STORY -As a staff user, I want to be able to edit a menu when updates are needed``
 
@@ -199,7 +200,7 @@ Implementation:
 
 On the manage menus page a button was added to allow staff members to edit a menu when changes need to be made.
 
-![Edit Menu/Dish]()
+![Edit Menu/Dish](doc/wire/edit.png)
 
 
 Implementation:
@@ -207,7 +208,7 @@ Implementation:
 **Menu/Dish**
 
 
-![Menu]()
+![Menu](doc/wire/mebudish.png)
 
 ``USER STORY -As a staff user, I want to be able to delete a menu when it is no longer used``
 
@@ -223,21 +224,12 @@ On the manage menus page, a delete button has been implemented that will take st
 
 Implementation:
 
-**Create booking page**
-
-A booking page was implemented with a form that takes in the customer details and enables the user to easily make a booking through the UI. 
-
-Extensive logic was added to the form validation to ensure that not only is there a table available for the users chosen time and date but also that it has enough seats for the amount of guests. If the form is successful with validation on the front end, logic is in place to find the lowest capacity table to seat the guests for the given date and time.
-
-This allows for seat optimisation to ensure we do not have small amounts of guests at tables that could of been booked for larger groups. Ensuring table optimisation and revenue for the restaurant.
-
-![Create Booking]()
 
 Favicon
     * A site wide favicon was implemented.
     * This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
-![Favicon]
+![Favicon](doc/wire/fav.png)
 
 
 
@@ -250,7 +242,7 @@ This covers:
 * Create Menu - Only authorized to staff
 * Edit Menu - Only authorized to staff
 * Delete Menu - Only authorized to staff
-* Create booking - only for user
+
 
 
 
@@ -274,7 +266,6 @@ A favicon was added the website to enable users to easily locate the website in 
 - In a future release I would like to implement a page which displays a table map of the restaurant with information displayed on each table of upcoming bookings. This feature would allow staff to easily see if there are any upcoming bookings on the each table and plan accordingly. 
 
 
-## The-Skeleton-Plane
 
 ### Wireframes
 
@@ -425,4 +416,4 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 ## Credits
 
-- site was developed by Designed By HTML Codex
+- site was  Designed By HTML Codex

@@ -35,4 +35,6 @@ urlpatterns = [
     path('dish/<int:id>/', views.single_dish, name='dish'),
     path('menu/', views.menu,name='menu'),    
     path('dishes/',views.all_dishes,name="all_dishes"),
+    path('dish/<int:id>/', views.single_dish, name='dish'),
+    path('delete_dish/<slug:pk>/', views.DeleteDish.as_view(),name='delete_dish')
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

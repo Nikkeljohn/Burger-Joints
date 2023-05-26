@@ -1,15 +1,15 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from hotel.models import Contact, Team, Profile, Dish, Booking
+from hotel.models import Contact, Team, Profile, Dish
 from django.http import HttpResponse,JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
-from django.views.generic import (
-    CreateView, ListView,
-    DetailView, DeleteView,
-    UpdateView
+from django.views.generic import DeleteView
+from django.contrib.auth.mixins import (
+    UserPassesTestMixin, LoginRequiredMixin
 )
+
 from django.shortcuts import render
-from .forms import BookingForm
+
 
 
 # Create your views here.
@@ -182,3 +182,10 @@ def book_table(request):
         form = BookingForm()
 
     return render(request, 'book.html', {'form': form})
+
+class DeleteDish(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Dish 
+    success_url = '/'
+
+    def test_func(self):
+        return self.request.user.is_superuser

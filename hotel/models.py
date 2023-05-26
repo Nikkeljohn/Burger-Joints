@@ -46,7 +46,7 @@ class Team(models.Model):
 
 class Dish(models.Model):
     name = models.CharField(max_length=200, unique=True)
-    image = models.ImageField(upload_to='dishes/%Y/%m/%d')
+    image = models.ImageField(upload_to='dishes')
     ingredients = models.TextField()
     details = models.TextField(blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)

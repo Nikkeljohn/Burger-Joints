@@ -48,8 +48,11 @@
                             }
                         </script>
                     </p>
-                    
+                   {% if request.user.is_superuser %}
+                    <a href="{% url 'delete_dish' i.pk %}">delete</a>
+                    {% endif %}
             </div>
+
         {% endfor %}
         </div>
     </div>
