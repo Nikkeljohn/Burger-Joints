@@ -1,1 +1,1 @@
-web: gunicorn Burger-Joints.wsgi
+web: gunicorn Burger-Joints.wsgi:application
