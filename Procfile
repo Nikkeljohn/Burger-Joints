@@ -1,1 +1,1 @@
-web: gunicorn burger-joint2.wsgi
+web: gunicorn Burger-Joints.wsgi
