@@ -1,1 +1,1 @@
-web: gunicorn codestar.wsgi
+web: gunicorn burger-joint2.wsgi
