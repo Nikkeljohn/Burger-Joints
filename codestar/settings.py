@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = os.environ.get("DEBUG") == "True"
 
-ALLOWED_HOSTS = ["burger-joint2.herokuapp.com", "localhost","8000-nikkeljohn-burgerjoints-mi4w863g0qa.ws-eu106.gitpod.io" ,"127.0.0.1"]
+ALLOWED_HOSTS = ["burger-joint2.herokuapp.com", "localhost", "8000-nikkeljohn-burgerjoints-di8z1z7pinf.ws-eu107.gitpod.io" , "127.0.0.1"]
 
 # Application definition
 

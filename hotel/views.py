@@ -15,14 +15,14 @@ from django.shortcuts import render
 # Create your views here.
 
 def menu(request):
-    return render(request, 'menu.html')
+    return render(request, 'hotel/menu.html')
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'hotel/about.html')
     
 def index(request):
     
-    return render(request,'index.html')
+    return render(request,'hotel/index.html')
 
 
 def contact_us(request):
@@ -37,16 +37,16 @@ def contact_us(request):
         obj.save()
         context['message']=f"Dear {name}, Thanks for your time!"
 
-    return render(request,'contact.html', context)
+    return render(request, 'hotel/contact.html', context)
 
 def about(request):
-    return render(request,'about.html')
+    return render(request, 'hotel/about.html')
 
 def team_members(request):
     context={}
     members = Team.objects.all().order_by('name')
     context['team_members'] = members
-    return render(request,'team.html', context)
+    return render(request, 'hotel/team.html', context)
 
 
 def register(request):
@@ -70,7 +70,7 @@ def register(request):
         else:
             context['error'] = f"A User with this email already exists"
 
-    return render(request,'register.html', context)
+    return render(request, 'hotel/register.html', context)
 
 def check_user_exists(request):
     email = request.GET.get('usern')
@@ -95,7 +95,7 @@ def signin(request):
         else:
             context.update({'message':'Invalid Login Details!','class':'alert-danger'})
 
-    return render(request,'login.html', context)
+    return render(request,'hotel/login.html', context)
 
 def dashboard(request):
     context={}
@@ -141,14 +141,14 @@ def dashboard(request):
     #orders = Order.objects.filter(customer__user__id=request.user.id).order_by('-id')
     #context['orders']=orders   
 
-    return render(request, 'dashboard.html')
+    return render(request, 'hotel/dashboard.html')
 
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/')
 
 def single_dish(request, id):
-    return render(request,'dish.html')
+    return render(request, 'hotel/dish.html')
 
 def all_dishes(request):
     context={}
@@ -159,7 +159,7 @@ def all_dishes(request):
         context['dish_category'] = Category.objects.get(id=id).name 
 
     context['dishes'] = dishes
-    return render(request,'all_dishes.html', context)
+    return render(request,'hotel/all_dishes.html', context)
 
 
 
@@ -177,11 +177,11 @@ def book_table(request):
 
             # Perform further actions, such as saving the booking to the database
 
-            return render(request, 'success.html')
+            return render(request, 'hotel/success.html')
     else:
         form = BookingForm()
 
-    return render(request, 'book.html', {'form': form})
+    return render(request, 'hotel/book.html', {'form': form})
 
 class DeleteDish(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Dish 
