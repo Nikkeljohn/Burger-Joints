@@ -29,7 +29,7 @@
                 {% else %}
                 <div class="food-item" style="background-color: lightgray;">
                 {% endif %}
-                    <a href="/media/{{i.image}}" target="_blank"><img src="/media/{{i.image}}" style="height: 200px;width: 100%;"></a>
+                    <a href="{{i.image.url}}" target="_blank"><img src="{{i.image.url}}" style="height: 200px;width: 100%;"></a>
                     <h2 class="my-3">{{i.name}}</h2>
                     <p>
                         {{i.details}}

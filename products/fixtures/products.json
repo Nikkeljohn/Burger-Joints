@@ -1,0 +1,177 @@
+[
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 1,
+          "sku": "pp5001340155",
+          "name": "Single Cup Brew",
+          "description": "",
+          "price": 7.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 1,
+          "sku": "pp5001600425",
+          "name": "Caffe Americano",
+          "description": "",
+          "price": 9.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 1,
+          "sku": "pp5001340155",
+          "name": "Caramel Macchiato",
+          "description": "",
+          "price": 15.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 1,
+          "sku": "pp5001600425",
+          "name": "Standard black coffee",
+          "description": "",
+          "price": 8.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+
+
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 2,
+          "sku": "pp5001340155",
+          "name": "Corn Tikki - Spicy fried Aloo",
+          "description": "",
+      "price": 15.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 2,
+          "sku": "pp5001600425",
+          "name": "Bread besan Toast",
+          "description": "",
+          "price": 35.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 2,
+          "sku": "pp5001340155",
+          "name": "Healthy soya nugget snacks",
+          "description": "",
+          "price": 35.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+        "model": "products.product",
+        "fields":{
+            "category": 2,
+            "sku": "pp5001600425",
+            "name": "Tandoori Soya Chunks",
+            "description": ".",
+            "price": 30.00,
+            "image_url": "",
+            "image": ""
+        }
+      }, 
+   
+   
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 3,
+          "sku": "pp5001600425",
+          "name": "Mini cheese Burger",
+          "description": "",
+          "price": 9.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 3,
+          "sku": "pp5001340155",
+          "name": "Double size burger",
+          "description": "",
+          "price": 15.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 3,
+          "sku": "pp5001600425",
+          "name": "Bacon, EGG and Cheese",
+          "description": " ",
+          "price": 13.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+   
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 3,
+          "sku": "pp5001600425",
+          "name": "Bacon, EGG and Cheese",
+          "description": " ",
+          "price": 13.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 3,
+          "sku": "pp5001340155",
+          "name": " ",
+          "description": "Pulled porx Burger",
+          "price": 18.00,
+          "image_url": "",
+          "image": ""
+      }
+    },
+    {
+      "model": "products.product",
+      "fields":{
+          "category": 3,
+          "sku": "pp5001340155",
+          "name": "Fried chicken Burger",
+          "description": " ",
+          "price": 22.00,
+      "image_url": "",
+          "image": ""
+      }
+    }
+    
+  
+    ]

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'rangefilter',
+    'products',
 ]
 
 LOGIN_REDIRECT_URL = '/'
