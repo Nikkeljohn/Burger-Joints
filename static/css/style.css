@@ -95,7 +95,7 @@ a:focus {
 /*********** Nav Bar CSS **********/
 /**********************************/
 .navbar {
-    position: relative;
+    position:fixed;
     transition: .5s;
     z-index: 999;
 }
@@ -147,7 +147,7 @@ a:focus {
         position: absolute;
         width: 100%;
         padding: 30px 60px;
-        background: transparent !important;
+        background:fixed;
         z-index: 9;
     }
     
@@ -168,7 +168,7 @@ a:focus {
     .navbar-light .navbar-nav .nav-link:focus {
         padding: 10px 10px 8px 10px;
         font-family: 'Nunito', sans-serif;
-        color: #ffffff;
+        color: #050000;
         font-size: 18px;
         font-weight: 600;
     }
@@ -1964,6 +1964,68 @@ a:focus {
     color: #719a0a;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -1974,3 +2036,37 @@ a:focus {
 	z-index: -1;
 }
 
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
