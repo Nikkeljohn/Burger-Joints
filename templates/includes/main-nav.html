@@ -1,17 +1,32 @@
-<div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Dish
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
+<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+    <div class="navbar-nav mx-auto">
+        <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>   
+        <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+        <a href="{% url 'all_dishes' %}" class="nav-item nav-link">Dish</a>
+        <a href="{% url 'team' %}" class="nav-item nav-link">Our Team</a>
+        <a href="{% url 'menu' %}"  class="nav-item nav-link">Menu</a>
+        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+        {% if user.is_authenticated %}
+        <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i></a>
+            <div class="dropdown-menu">
+            {% if user.is_superuser or user.is_staff %}
+                <a href="{% url 'admin:index' %}" class="dropdown-item">Dashboard</a>
+            {% else %}
+                <a href="{% url 'dashboard' %}"  class="dropdown-item">Dashboard</a>
+            {% endif %}
+                <a href="{% url 'logout' %}" class="dropdown-item">Logout</a>
             </div>
-        </li>
+        </div>
+        {% else %}
+        <a href="{% url 'register' %}" class="nav-link" ><i class="fas fa-user"></i></a>
+        {% endif %}
+    </div>
 
+</div>
+</div>
+</div>
+</div>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Menu
