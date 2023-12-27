@@ -5,12 +5,22 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?category=" class="dropdown-item">By Price</a>
                 <a href="" class="dropdown-item ">By Rating</a>
                 <a href="" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
+        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Menu
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <a href="{% url 'products' %}?category=snacks" class="dropdown-item">Snacks</a>
+            <a href="{% url 'products' %}?category=burger" class="dropdown-item ">Burger</a>
+            <a href="{% url 'products' %}?category=beverages" class="dropdown-item ">Beverages</a>
+            <a href="{% url 'products' %}" class="dropdown-item">All dish</a>
+        </div>
+    </li>
             
             <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
         {% if user.is_authenticated %}
