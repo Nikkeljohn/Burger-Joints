@@ -1975,3 +1975,13 @@ a:focus {
 .footer .copyright p a:hover {
     color: #719a0a;
 }
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
