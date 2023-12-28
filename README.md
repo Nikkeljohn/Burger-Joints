@@ -390,7 +390,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 The app should now be deployed.
 
-The live link can be found here: [Live Site](https://burger-joint2.herokuapp.com/)
+The live link can be found here: [Live Site]()
 
 ### Run Locally
 
