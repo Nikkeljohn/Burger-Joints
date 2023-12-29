@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rangefilter',
     'products',
     'bag',
-    'bookings',
+    
 ]
 
 LOGIN_REDIRECT_URL = '/'
