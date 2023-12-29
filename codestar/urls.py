@@ -25,6 +25,9 @@ urlpatterns = [
     path('', include('hotel.urls')),
     path('contact/',views.contact_us,name="contact"),
     path('products/', include('products.urls')),
+    path('bag/', include('bag.urls')),
+    
+    
 
     # path('about/',views.about,name="about"),
     # path('team/',views.team_members,name="team"),
