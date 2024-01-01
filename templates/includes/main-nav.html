@@ -42,7 +42,7 @@
             </div>
         </form>
     </div>
-    <a href="" class="nav-item nav-link">Booking</a>
+   
     <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
     {% if user.is_authenticated %}
     <div class="nav-item dropdown">
@@ -59,35 +59,4 @@
     {% else %}
     <a href="{% url 'register' %}" class="nav-link"><i class="fas fa-user"></i></a>
     {% endif %}
-</div>
-<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-        <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-
-        <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                href="{% url 'view_bag' %}">
-                <div class="text-center">
-                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                    <p class="my-0">
-                        {% if grand_total %}
-                        ${{ grand_total|floatformat:2 }}
-                        {% else %}
-                        $0.00
-                        {% endif %}
-                    </p>
-                </div>
-            </a>
-        </li>
-    </ul>
-</div>
-</div>
-<div class="row bg-white">
-    
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-            aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 </div>
