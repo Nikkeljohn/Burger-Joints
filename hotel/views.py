@@ -3,6 +3,7 @@ from hotel.models import Contact, Team, Profile, Dish
 from django.http import HttpResponse,JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.views.generic import DeleteView
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin
