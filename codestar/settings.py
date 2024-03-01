@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rangefilter',
     'products',
     'bag',
+    'home',
     
 ]
 
