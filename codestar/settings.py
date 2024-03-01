@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ["burger-joint2.herokuapp.com", "localhost", "8000-nikkeljohn-burgerjoints-di8z1z7pinf.ws-eu107.gitpod.io" , "127.0.0.1"]
+ALLOWED_HOSTS = ["burger-joint2.herokuapp.com", "localhost", "8000-nikkeljohn-burgerjoints-5bal0uzsa3a.ws-eu108.gitpod.io" , "127.0.0.1"]
 
 # Application definition
 
@@ -94,6 +94,18 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'codestar.wsgi.application'
 
