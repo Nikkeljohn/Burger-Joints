@@ -25,7 +25,7 @@ def index(request):
     
     return render(request,'hotel/index.html')
 
-
+@login_required
 def contact_us(request):
     context={}
     if request.method=="POST":

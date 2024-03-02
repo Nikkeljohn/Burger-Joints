@@ -25,7 +25,6 @@ urlpatterns = [
     path('', include('hotel.urls')),
     path('contact/',views.contact_us,name="contact"),
     path('products/', include('products.urls')),
-    path('bag/', include('bag.urls')),
     path('', include('home.urls')),
     
     
