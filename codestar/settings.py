@@ -34,12 +34,11 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'cloudinary',
-    'hotel',
     'crispy_forms',
     'crispy_bootstrap5',
     'rangefilter',
-    'products',
     'home',
+    'products',
     
 ]
 
