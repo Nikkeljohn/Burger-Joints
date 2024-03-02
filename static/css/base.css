@@ -70,6 +70,14 @@ body {
 	z-index: -1;
 }
 
+.page-background {
+    background-image: url('/media/close-up-fresh-homemade-lemonade-with-mint.jpg');
+    background-size: cover; 
+}
+.contact-background {
+    background-image: url('/media/hot-line-contact-us-call-center-search-interface.jpg');
+    
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
