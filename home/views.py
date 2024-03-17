@@ -71,7 +71,7 @@ def register(request):
         else:
             context['error'] = f"A User with this email already exists"
 
-    return render(request, 'hotel/register.html', context)
+    return render(request, 'home/register.html', context)
 
 def check_user_exists(request):
     email = request.GET.get('usern')
@@ -142,7 +142,7 @@ def dashboard(request):
     #orders = Order.objects.filter(customer__user__id=request.user.id).order_by('-id')
     #context['orders']=orders   
 
-    return render(request, 'hotel/dashboard.html')
+    return render(request, 'home/dashboard.html')
 
 
 
