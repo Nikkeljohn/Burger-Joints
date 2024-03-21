@@ -390,7 +390,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 The app should now be deployed.
 
-The live link can be found here: [Live Site]()
+The live link can be found here: [Live Site](https://burger-joint2.herokuapp.com/)
 
 ### Run Locally
 
@@ -418,6 +418,3 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 - site was  Designed By HTML Codex
 
-## Admin logins
-user name : user
-password : 9495314785
