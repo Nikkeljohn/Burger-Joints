@@ -16,8 +16,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
-#'DEVELOPMENT' in os.environ
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ["burger-joint2.herokuapp.com", "localhost",  '8000-nikkeljohn-burgerjoints-im481hvt735.ws-eu111.gitpod.io' , "127.0.0.1"]
 
@@ -115,10 +114,14 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': ({
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    } if 'DEV' in os.environ
+        else dj_database_url.parse(
+        os.environ.get('DATABASE_URL')
+    )
+    )
 }
 
 
