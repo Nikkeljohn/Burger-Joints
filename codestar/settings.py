@@ -16,7 +16,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
+#'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ["burger-joint2.herokuapp.com", "localhost",  '8000-nikkeljohn-burgerjoints-im481hvt735.ws-eu111.gitpod.io' , "127.0.0.1"]
 
