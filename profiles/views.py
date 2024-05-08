@@ -131,8 +131,3 @@ def dashboard(request):
     #context['orders']=orders   
 
     return render(request, 'home/profile.html')
-
-
-
-
-

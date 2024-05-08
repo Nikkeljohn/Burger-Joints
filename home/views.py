@@ -1,27 +1,15 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
-from home.models import Contact 
-from django.http import HttpResponse,JsonResponse, HttpResponseRedirect
-from django.contrib.auth.models import User
+from django.shortcuts import render
+from home.models import Contact
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
-from django.views.generic import DeleteView
-from django.contrib.auth.mixins import (
-    UserPassesTestMixin, LoginRequiredMixin
-)
-
-from django.shortcuts import render
-
-
 
 # Create your views here.
-
-
-    
 def index(request):
-    
-    return render(request,'home/index.html')
+    """ A view to return the index page """
 
-@login_required
+    return render(request, 'home/index.html')
+
+
 def contact_us(request):
     context = {}
     if request.method == "POST":
@@ -34,8 +22,6 @@ def contact_us(request):
         context['message'] = f"Dear {name}, Thanks for your time!"
 
     return render(request, 'home/contact.html', context)
-
-
 
 def dashboard(request):
     context={}
@@ -82,4 +68,3 @@ def dashboard(request):
     #context['orders']=orders   
 
     return render(request, 'home/dashboard.html')
-
