@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('https://asset.cloudinary.com/duloytybb/7cb7240d87838cadc7e832d9d55f489c') no-repeat center center fixed;
+    background: url('/media/fruit-slices-white.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
