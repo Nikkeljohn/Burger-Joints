@@ -41,15 +41,11 @@ The authentication epic is for all stories related to the registration, login an
 
 The menu epic is for all stories that relate to the creating, deleting, editing and viewing of menus. This allows for  users to view menus and for staff to manage them from admin panel.
 
-**EPIC 5 - Booking**
-
-The booking epic is for all stories that relate to creating, viewing, updating  bookings. This allows the staff to easily view upcoming bookings, manage the bookings and also for customers to book and manage their own reservations.
-
-**EPIC 6 - Deployment Epic**
+**EPIC 5 - Deployment Epic**
 
 This epic is for all stories related to deploying the app to heroku so that the site is live for staff and customer use.
 
-**EPIC 7 - Documentation**
+**EPIC 6 - Documentation**
 
 This epic is for all document related stories and tasks that are needed to document the software development lifecycle of the application. It aims to deliver quality documentation, explaining all stages of development and necessary information on running, deploying and using the application.
 
@@ -88,22 +84,13 @@ As a staff user, I want to be able to edit a menu when updates are needed
 
 
 As a staff user, I want to be able to delete a menu when it is no longer used
-only from backend
+ from backend and frontend
 
-**EPIC 5 - Booking**
-
-As a user, I would like to be able to create a new booking when I want to visit the restaurant
-
-
-
-As a user, I would like to receive feedback when I create a booking or edit one so I know it was completed successfully
-
-
-**EPIC 6 - Deployment Epic**
+**EPIC 5 - Deployment Epic**
 
 As a developer, I need to deploy the project to heroku so that it is live for customers
 
-**EPIC 7 - Documentation**
+**EPIC 6 - Documentation**
 
 Tasks:
 
@@ -133,7 +120,6 @@ Implementation:
 The following navigation items are available on all pages:
   * Home -> index.html - Visible to all
   * Dashboard - Visible to logged in users
-  *  Booking page - Visible to everyone
   * View Menus/Dish -> menus.html/all_dishes.html - Visible to all
   * Login -> login.html - Visible to logged out users
   * Register -> signup.html - Visible to logged out users

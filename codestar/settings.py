@@ -3,15 +3,10 @@ from pathlib import Path
 import dj_database_url
 if os.path.exists('env.py'):
     import env
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-#TEMPLATE_DIR = os.path.join(BASE_DIR,'template')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -19,7 +14,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 #'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ["burger-joint2.herokuapp.com", "localhost",  '8000-nikkeljohn-burgerjoints-im481hvt735.ws-eu111.gitpod.io' , "127.0.0.1"]
+ALLOWED_HOSTS = ["burger-joint2.herokuapp.com", "localhost",  '8000-nikkeljohn-burgerjoints-im481hvt735.ws-eu114.gitpod.io' , "127.0.0.1"]
 
 # Application definition
 
@@ -110,6 +105,7 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'codestar.wsgi.application'
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

@@ -2,39 +2,47 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
 
+<head>
     {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
-        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
 
     <title>Burger Joint {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -45,7 +53,8 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                            placeholder="Search our site">
                         <div class="input-group-append">
                             <button class="form-control btn btn-danger border border-black rounded-0" type="submit">
                                 <span class="icon">
@@ -59,44 +68,88 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
-            
-                                {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                    {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                            {% endif %}
+                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
                         </div>
                     </li>
-                
                 </ul>
             </div>
         </div>
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav w-auto mx-auto">
+                        <li class="nav-item">
+                            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}"
+                                id="home-link">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#"
+                                id="all-products-link" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">All Products</a>
+                            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By
+                                    Price</a>
+                                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By
+                                    Category</a>
+                                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="menu-link"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MENU</a>
+                            <div class="dropdown-menu border-0" aria-labelledby="menu-link">
+                                <a href="{% url 'products' %}?category=burgers" class="dropdown-item">BURGER</a>
+                                <a href="{% url 'products' %}?category=snacks" class="dropdown-item">SNACKS</a>
+                                <a href="{% url 'products' %}?category=beverages" class="dropdown-item">BEVERAGES</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'contact' %}" class="nav-item nav-link text-black">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
-      
     </header>
 
+
     {% if messages %}
-        <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -106,59 +159,56 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
-    
- <!-- Footer Start -->
- <div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="footer-contact">
-                            <h2>Our Address</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                            <p><i class="fa fa-envelope"></i>info@example.com</p>
-                            <div class="footer-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-youtube"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-contact">
+                                <h2>Our Address</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-link">
+                                <h2>Quick Links</h2>
+                                <a href="">Terms of use</a>
+                                <a href="">Privacy policy</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="footer-link">
-                            <h2>Quick Links</h2>
-                            <a href="">Terms of use</a>
-                            <a href="">Privacy policy</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <!-- Optional content for the right column -->
                 </div>
             </div>
-            <div class="col-lg-5">
-                
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright &copy; <a href="#">Burgerjoint</a>, All Right Reserved.</p>
+                <p>Designed By <a href="https://github.com/Nikkeljohn/Burger-Joints">Nikkel John</a></p>
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <div class="container">
-            <p>Copyright &copy; <a href="#">Burgerjoint</a>, All Right Reserved.</p>
-            <p>Designed By <a href="https://github.com/Nikkeljohn/Burger-Joints">Nikkel John</a></p>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
-
-<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-
-
-
-  </body>
+    <!-- Footer End -->
+</body>
 </html>
