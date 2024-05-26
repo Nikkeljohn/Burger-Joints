@@ -1,9 +1,9 @@
 # Burger-Joints
 
-is a fictional restaurant located beside New york city . The app is a restaurant management system designed to allow staff to easily manage the menus . It also provides customers with a simple,
+This a fictional restaurant located beside New york city . The app is a restaurant management system designed to allow staff to easily manage the menus . It also provides customers with a simple,
 
 
-![Mock Up]
+![homepage]
 
 ### Site-Goals
 
@@ -111,46 +111,36 @@ Tasks:
 
 ``USER STORY - As a developer, I need to create the navbar so that users can navigate the website from any device``
 
-Implementation:
+## Features
 
-**Navigation Menu**
-
- The Navigation contains links for Home, Bookings, Menus and has allauth options.
-
-The following navigation items are available on all pages:
-  * Home -> index.html - Visible to all
-  * Dashboard - Visible to logged in users
-  * View Menus/Dish -> menus.html/all_dishes.html - Visible to all
-  * Login -> login.html - Visible to logged out users
-  * Register -> signup.html - Visible to logged out users
-  * Logout -> logout.html - Visible to logged in users
-
-The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
-
-![Navbar](doc/website/navbar.png)
-
-``USER STORY - As a restaurant owner, I would like a home page so that customers can view information on my restaurant``
-
-Implementation:
-
-**Home Page**
-
-The home page contains a hero image our animated where images changes everytime  and the restaurant information at the top of the page. This will immediately make it evident to the user, what the purpose of the website is.
-
-whitin the nav bar we have Home, Bookings, About, Dish, Our Team, Menu and Contact
-. These buttons will allow the user a quick way to the respective pages if they wish to make a booking or view the restaurants active menus.
-
-The contact us  section page onyly contains a google map, displaying the location of the restaurant and the restaurant is opened 24hrs.
-
-![Hero Image](doc/website/homepage.png)
+### Existing Features
+| Feature | Description | |
+| --- | --- | --- |
+| Hero image | Presents a big image with a call to action for all products page. | |
+| Search Bar | To find specific products, users can utilize the search bar in the navigation menu. The search term is compared to product names and descriptions to provide a list of products that match the user's search criteria. | 
+| Filter by Price or Category | Through the topbar is possible to display the products ordered by price or category |  |
+| All Products | This page displays all the available products |  |
+| Product card | With a good image of the product, this card displays the name, category and price for a regular user. For the admin, there are two special links for editing or deleting the product. |  |
+| Product | This page displays all the detailed informations about the products, besides the 'Add to Bag' buttom and a Reviews section where any logged user can leave a review. | |
+| Profile page | This page stores the user's default delivery information and the order history. Each order number has a link to its order confirmation page | |
+| Profile Page | This page stores the user's default delivery information and the order history. Each order number has a link to its order confirmation page | |
+| Error Page | If the user ends up in a broken link or a page the doesn't exist, a error page is displayed informing that the page they are looking for isn't available. | |
+| Add Product | As an admin user, there is the possibility of add a new product to the site from the My Account >>> Product Management dropdown menu in the navbar |  |
+|Contact form| Allows the user to send a message to the Site Admin. | |
+	
 
 
-![Find Us](doc/website/findus.png)
+### Features to Implement in Future
 
 
-``USER STORY - As a developer, I need to create the footer with social media links and contact information``
+- Delete account: Allows the user to delete their account
+- Wishlist: Allow the user to add a product to their wishlist so that they can receive news and offers about that product.
+- Bag page so user can add item to it 
+- Checkout page with payment
 
-Implementation:
+Back to [top](#table-of-contents)
+
+
 
 **Footer**
 
@@ -334,7 +324,26 @@ A favicon was added the website to enable users to easily locate the website in 
 
 ## Testing
 
-Test cases and results can be found in the [TESTING.md](TESTING.md) file. This was moved due to the size of the file.
+- HTML
+
+![HTML](media/screenshot/home.png)
+
+- CSS
+
+![CSS](media/screenshot/css.png)
+
+- Add Product
+
+![Add](media/screenshot/addproduct.png)
+
+- All HTML pages were checked, and has same warning message
+
+![Warning](media/screenshot/addproduct.png)
+
+- All models.py, views.py, and forms.py were checked.
+
+![.pyfiles](media/screenshot/Screenshot%202024-05-25%20at%2009.30.56.png)
+
 
 ## Deployment
 
@@ -400,7 +409,13 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 - This will create a duplicate of the full project in your GitHub Repository.
 
-## Credits
+## Credits 
+1. All the images were taken from google
 
-- site was  Designed By HTML Codex
+
+## Special Thanks
+
+special thanks to my mentors Daisy McGirr 
+
+Special thanks to my batch mates from ucd and all the people who helped me directly and indirectly for this project
 
