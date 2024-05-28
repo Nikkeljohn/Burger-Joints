@@ -340,6 +340,28 @@ A favicon was added the website to enable users to easily locate the website in 
 
 ![.pyfiles](media/screenshot/Screenshot%202024-05-25%20at%2009.30.56.png)
 
+## Light house 
+
+![Lighthoues](media/dishes/lighthouse.png)
+
+### Browser Testing
+I have tested this application works on the following installed browsers, using a Dell laptop on Windows OS:
+
+
+- Google Chrome Version 112.0.5615.138
+- Firefox Browser 112.0.1
+
+I have tested this application works on the following Android devices using Chrome browser 112.0.5615.138:
+
+- Samsung Galaxy S21ultra with Android 13.
+- Samsung Galaxy S21 with Android 13.
+
+### Responsiveness
+I used Chrome developer tool to check the responsiveness on different screen sizes:
+- 375px (Mobile)
+- 728px (Tablet)
+- 1024px (laptop)
+- 4k (Monitor resolution)
 
 ## Deployment
 
