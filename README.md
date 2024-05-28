@@ -264,10 +264,6 @@ A favicon was added the website to enable users to easily locate the website in 
 ![login mob](doc/wire/dashboardmob.png)
 
 
-- Create Booking
-
-![Create Booking](doc/website/booking.png)
-![Create booking](doc/wire/bookingmob.png)
 
 ## Technolgies
 
@@ -419,3 +415,6 @@ special thanks to my mentors Daisy McGirr
 
 Special thanks to my batch mates from ucd and all the people who helped me directly and indirectly for this project
 
+## Bugs
+
+The background image is not working, 
