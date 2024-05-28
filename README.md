@@ -3,7 +3,7 @@
 This a fictional restaurant located beside New york city . The app is a restaurant management system designed to allow staff to easily manage the menus . It also provides customers with a simple,
 
 
-![homepage]
+
 
 ### Site-Goals
 
