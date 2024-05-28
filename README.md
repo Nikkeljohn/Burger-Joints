@@ -439,4 +439,4 @@ Special thanks to my batch mates from ucd and all the people who helped me direc
 
 ## Bugs
 
-The background image is not working, 
+The background image is not working, I tried so many ways but it is not working. 
